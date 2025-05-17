@@ -36,8 +36,13 @@ nextBtn.onclick = nextTrack;
 loadTrack(0);
 
 /******** NOT <3 ********/
-function showNote(){ document.getElementById("note-popup").style.display="block"; }
-function hideNote(){ document.getElementById("note-popup").style.display="none"; }
+function showNote() {
+  document.getElementById("note-panel").classList.add("show");
+}
+function hideNote() {
+  document.getElementById("note-panel").classList.remove("show");
+}
+
 
 /******** BÜYÜK BALON ********/
 const balloonTexts = [
