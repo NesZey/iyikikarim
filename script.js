@@ -1,5 +1,5 @@
 /******** FOTOĞRAFLAR ********/
-const photos = ["images/foto1.jpg","images/foto2.jpg","images/foto3.jpg"];
+const photos = ["foto1.jpg","foto2.jpg","foto3.jpg","foto4.jpg","foto5.jpg","foto6.jpg","foto7.jpg","foto8.jpg","foto9.jpg","foto10.jpg","foto11.jpg""foto12.jpg","foto13.jpg","foto14.jpg",];
 let currentPhoto = 0;
 setInterval(()=> {
   currentPhoto = (currentPhoto+1)%photos.length;
