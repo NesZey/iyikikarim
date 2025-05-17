@@ -6,6 +6,14 @@ setInterval(()=> {
   document.getElementById("photo").src = photos[currentPhoto];
 }, 5000);
 
+/******** FOTOĞRAFLAR ********/
+const photos = ["foto1.jpg","foto2.jpg","foto4.jpg","foto5.jpg","foto3.jpg"];
+let currentPhoto = 0;
+setInterval(()=> {
+  currentPhoto = (currentPhoto+1)%photos.length;
+  document.getElementById("photo").src = photos[currentPhoto];
+}, 5000);
+
 /******** MÜZİK OYNATICI ********/
 const tracks = [
   {src:"sarki1.mp3", name:"Şarkı 1"},
@@ -34,6 +42,47 @@ function nextTrack(){
 playBtn.onclick = togglePlay;
 nextBtn.onclick = nextTrack;
 loadTrack(0);
+
+/******** NOT <3 ********/
+function showNote(){ document.getElementById("note-popup").style.display="block"; }
+function hideNote(){ document.getElementById("note-popup").style.display="none"; }
+
+/******** BÜYÜK BALON ********/
+const balloonTexts = [
+  "Seninle her gün biraz daha âşık oluyorum 💖",
+  "Gülüşün güneşim gibi, hayatıma ışık katıyor ☀️",
+  "Kalbim hep 'sen' diye atıyor 💓",
+];
+function showBigBalloon(i){
+  document.getElementById("balloon-text").innerText=balloonTexts[i];
+  document.getElementById("big-balloon").style.display="flex";
+}
+function hideBigBalloon(){
+  document.getElementById("big-balloon").style.display="none";
+}
+
+/******** UÇUŞAN KALPLER ********/
+const lovePhrases = [
+  "Seni seviyorum! 💌",
+  "İyi ki varsın! 🌟",
+  "Kalbim seninle 💗",
+  "Her şeyimsin 💫",
+  "Birlikte nice yıllara! 🥂",
+  "Gülüşüne kurban 😍",
+  "Dünyam sensin 🌍",
+  "Rüyam gerçek oldu 🌙",
+];
+function spawnHeart(){
+  const heart = document.createElement("div");
+  heart.className="heart";
+  heart.textContent = lovePhrases[Math.floor(Math.random()*lovePhrases.length)];
+  heart.style.left = Math.random()*90 + "vw";
+  heart.style.bottom = "-40px";
+  document.getElementById("heart-container").appendChild(heart);
+  setTimeout(()=>heart.remove(),3000);
+}
+setInterval(spawnHeart, 800);
+
 
 /******** NOT <3 ********/
 function showNote() {
