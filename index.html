@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sevgilime Özel</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Nice yıllara sevgilim!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="panel music-panel">
-            <audio id="audio-player" src="music.mp3"></audio>
-            <button onclick="playMusic()">Çal</button>
-            <button onclick="pauseMusic()">Duraklat</button>
-            <button onclick="nextMusic()">Sonraki</button>
-        </div>
-        
-        <div class="panel image-panel">
-            <img id="image" src="image1.jpg" alt="Görsel">
-            <button onclick="changeImage()">Değiştir</button>
-        </div>
-        
-        <div class="panel chat-panel">
-            <input type="text" id="chat-input" placeholder="Mesaj yaz...">
-            <button onclick="sendMessage()">Gönder</button>
-            <div id="chat-response"></div>
-        </div>
-    </div>
+  <h1>Nice yıllara sevgilim!</h1>
 
-    <script src="script.js"></script>
+  <!-- Müzik Paneli -->
+  <div class="music-panel">
+    <audio id="music-player" controls>
+      <source src="music/sarki1.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="changeMusic()">Müziği Değiştir</button>
+  </div>
+
+  <!-- Telefon Paneli -->
+  <div class="photo-panel">
+    <div class="phone-frame">
+      <img id="photo" src="images/foto1.jpg" alt="Fotoğraf">
+    </div>
+  </div>
+
+  <!-- Kalp Baloncukları (otomatik) -->
+  <div id="heart-container"></div>
+
+  <!-- Not <3 Butonu -->
+  <button class="note-button" onclick="showNote()">Not &lt;3</button>
+  <div id="note-popup" class="popup" onclick="hideNote()">
+    <p>paragraf1</p>
+  </div>
+
+  <!-- Buton Paneli -->
+  <div class="balloon-panel">
+    <button onclick="showBigBalloon(0)">buton1</button>
+    <button onclick="showBigBalloon(1)">buton2</button>
+    <button onclick="showBigBalloon(2)">buton3</button>
+  </div>
+
+  <div id="big-balloon" class="big-balloon" onclick="hideBigBalloon()">
+    <p id="balloon-text"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
