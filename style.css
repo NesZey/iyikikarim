@@ -58,6 +58,47 @@ h1 { color: #fff; margin: 24px 0; }
   z-index: 10;
 }
 
+/* NOT DEFTERİ PANELİ */
+#note-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background: #fffbe6;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  padding: 16px;
+  transition: right 0.4s ease;
+  z-index: 20;
+  border-left: 6px double #ffb6c1;
+  display: flex;
+  flex-direction: column;
+}
+#note-panel.show {
+  right: 0;
+}
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+.note-header button {
+  background: none;
+  border: none;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.note-content {
+  flex: 1;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+
 /* SAĞ-ALTTAKİ PANEL */
 #corner-panel {
   position: fixed;
