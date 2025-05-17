@@ -8,8 +8,8 @@ setInterval(()=> {
 
 /******** MÜZİK OYNATICI ********/
 const tracks = [
-  {src:"music/sarki1.mp3", name:"Şarkı 1"},
-  {src:"music/sarki2.mp3", name:"Şarkı 2"},
+  {src:"sarki1.mp3", name:"Şarkı 1"},
+  {src:"sarki2.mp3", name:"Şarkı 2"},
 ];
 let currentTrack = 0;
 const player = document.getElementById("player");
