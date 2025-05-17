@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sevgilime Özel 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="background"></div>
+    <div id="baloncuklar"></div>
+    
+    <!-- PANELLER -->
+    <div class="panel-container">
+        <!-- MÜZİK PANELİ -->
+        <div class="panel sol-panel">
+            <h2>🎵 Müziklerimiz</h2>
+            <audio id="muzik" controls></audio>
+            <div class="muzik-listesi">
+                <button onclick="muzikDegistir('song1.mp3')">Şarkı 1</button>
+                <button onclick="muzikDegistir('song2.mp3')">Şarkı 2</button>
+            </div>
+        </div>
+        
+        <!-- TARİH PANELİ -->
+        <div class="panel orta-panel">
+            <h2>📅 Bizim Hikayemiz</h2>
+            <div id="geri-sayim">Bugün birlikte geçirdiğimiz <span id="gun-sayisi">0</span>. gün!</div>
+            
+            <div class="olcum-cubuklari">
+                <div class="olcum">
+                    <label>Sevgi: <span id="sevgi">87</span>%</label>
+                    <div class="cubuk"><div class="dolum" style="width:87%"></div></div>
+                </div>
+                <div class="olcum">
+                    <label>Neşe: <span id="nese">92</span>%</label>
+                    <div class="cubuk"><div class="dolum" style="width:92%"></div></div>
+                </div>
+            </div>
+            
+            <div class="mini-takvim">
+                <div class="takvim-gunu aktif" data-tarih="16.05">16 Mayıs</div>
+                <div class="takvim-gunu" data-tarih="16.06">16 Haziran</div>
+                <div class="takvim-gunu" data-tarih="16.07">16 Temmuz</div>
+            </div>
+        </div>
+        
+        <!-- FOTOĞRAF PANELİ -->
+        <div class="panel sag-panel">
+            <h2>📸 Anılarımız</h2>
+            <img id="resim" src="assets/resimler/foto1.jpg">
+            <button onclick="resimDegistir()">Sonraki Fotoğraf</button>
+        </div>
+    </div>
+    
+    <!-- GİZLİ KALP -->
+    <div id="kalp" class="kalp-animasyonu" onclick="kalbiKapat()">
+        <span id="kalp-mesaji">İyi ki varsın!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

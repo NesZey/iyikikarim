@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ffd6e7, #ffdfed);
+    z-index: -1;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* KALP ANİMASYONU */
+.kalp-animasyonu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    text-shadow: 0 0 20px #ff4081;
+    cursor: pointer;
+    z-index: 100;
+    animation: kalpAtisi 1.5s infinite;
+}
+
+@keyframes kalpAtisi {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* BALONCUKLAR */
+.baloncuk {
+    position: absolute;
+    background: rgba(255, 105, 180, 0.7);
+    border-radius: 50%;
+    animation: yuksel 8s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+@keyframes yuksel {
+    0% { 
+        transform: translateY(100vh) scale(0.3); 
+        opacity: 0;
+    }
+    50% { opacity: 1; }
+    100% { 
+        transform: translateY(-100px) scale(1); 
+        opacity: 0;
+    }
+}
+
+/* TARİH PANELİ */
+#geri-sayim {
+    background: #ff4081;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.olcum-cubuklari {
+    margin: 25px 0;
+}
+
+.cubuk {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin: 8px 0;
+}
+
+.dolum {
+    height: 100%;
+    background: linear-gradient(to right, #ff4081, #ff6b8b);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+.mini-takvim {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.takvim-gunu {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255, 64, 129, 0.2);
+    font-size: 0.9em;
+}
+
+.takvim-gunu.aktif {
+    background: #ff4081;
+    color: white;
+    font-weight: bold;
+}
+
+/* FOTOĞRAF PANELİ */
+#resim {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #ff6b8b;
+    transform: scale(1
